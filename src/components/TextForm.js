@@ -36,11 +36,6 @@ export default function TextForm(props) {
     props.showAlert('Extra spaces removed!', 'success');
   };
 
-  const handleBold = () => {
-    let newText = text;
-    setText(newText);
-    props.showAlert('Converted to boldcase', 'success');
-  };
 
   const [text, setText] = useState('');
   // setText('new text');
@@ -98,14 +93,6 @@ export default function TextForm(props) {
           onClick={handleExtraSpace}
         >
           Remove Extra Space
-        </button>
-
-        <button
-          disabled={text.length === 0}
-          className="btn btn-primary mx-1 my-1"
-          onClick={handleBold}
-        >
-          Remove bold Space
         </button>
 
         <div
